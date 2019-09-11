@@ -1,0 +1,10 @@
+<p>Simple app to help you understand Angular Input & Outputs</p>
+
+<p>Write your memory</p>
+
+<input type="text" [(ngModel)]="memoryText">
+
+<app-memories-child [memory]="memoryText"  (numberGenerated)="onNumberGenerated($event)"></app-memories-child>
+
+<p>Random number from child component: {{ randomNumber || 'Not yet generated' }}</p>
+
